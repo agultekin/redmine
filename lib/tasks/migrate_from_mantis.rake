@@ -212,7 +212,7 @@ task :migrate_from_mantis => :environment do
 
     class MantisCustomField < ActiveRecord::Base
       self.table_name = :mantis_custom_field_table
-      set_inheritance_column :none
+      set_inheritance_column = :none
       has_many :values, :class_name => "MantisCustomFieldString", :foreign_key => :field_id
       has_many :projects, :class_name => "MantisCustomFieldProject", :foreign_key => :field_id
 
